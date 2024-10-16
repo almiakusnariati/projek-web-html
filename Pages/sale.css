@@ -1,0 +1,283 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #C4E6C3;
+}
+
+/* navbar*/
+nav {
+  background-color: #7C9D96;
+  color: white;
+  padding: 30px;
+  position: fixed;
+    width: 100%;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
+  width: 30%;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  gap: 30px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #FFF;
+  font-size: 18px;
+}
+
+.menu a:hover {
+  border-bottom: 2px solid #FFF;
+}
+
+.container-1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+.search-input {
+  margin-left: 10px;
+  padding: 4px 20px;
+  border-radius: 6px;
+  border: 2px solid #A2CDB0;
+}
+
+/* Mengatur tampilan kontainer produk */
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 24px;
+  padding-top: 105px;
+}
+
+/* tampilan kotak produk */
+.box {
+  background-color: white; 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 400px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease-in-out;
+  padding: 16px;
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2);
+}
+
+.box:hover {
+  box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.3);
+}
+
+/*gambar produk */
+.gambar {
+  width: 192px;
+  height: 192px;
+  border-radius: 8px;
+}
+
+/*judul produk */
+.title {
+  font-weight: bold;
+  font-size: 16px;
+  margin-top: 5px;
+  text-align: center;
+}
+
+/*harga dan stok produk */
+.harga-stock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5px;
+}
+
+/* Mengatur tampilan harga produk */
+.price {
+  font-weight: bold;
+  font-size: 16px;
+  color: #32be8f;
+}
+
+/* Mengatur tampilan stok produk */
+.stok {
+  font-size: 14px;
+  color: #777;
+}
+
+/* Mengatur tampilan rating dan asal kota produk */
+.rating-asal-kota {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5px;
+}
+
+/* Mengatur tampilan rating produk */
+.rating {
+  font-size: 14px;
+  color: #f1c40f;
+  font-size: 16x;
+}
+
+/* Mengatur tampilan asal kota produk */
+.asal-kota {
+  font-size: 14px;
+  color: #777;
+}
+
+/* Mengatur tampilan footer */
+footer {
+  background-color: #333333;
+  color: white;
+  padding: 16px;
+}
+
+/* Mengatur tampilan bagian pertama footer */
+.footer-1 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 64px;
+  margin-inline: 32px;
+}
+
+/* Mengatur tampilan judul "FashionStore" dan "Ikuti Kami" */
+.title-follow-us h1 {
+  font-family: 'Caveat', cursive;
+  font-size: 36px;
+}
+
+/* Mengatur tampilan bagian bantuan dan informasi hukum */
+.help-legal-info {
+  display: flex;
+  gap: 40px;
+}
+
+/* Mengatur tampilan bagian bantuan */
+.help, .legal-info {
+  line-height: 24px;
+  font-size: 18px;
+  text-align: right;
+}
+
+.fa {
+  padding: 8px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+}
+
+.fa:hover {
+  opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-instagram {
+  background:  rgb(212, 86, 128);
+  color: white;
+}
+
+.fa-youtube {
+  background: red;
+  color: white;
+}
+
+/*bagian kedua footer */
+.footer-2 {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.footer-2 p {
+  font-family: 'Barlow Condensed', sans-serif;
+  margin-top: 6px;
+}
+
+.hamburger{
+  display: none;
+  cursor: pointer;
+}
+
+.bar{
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: black;
+}
+
+@media (max-width:768px){
+  .hamburger{
+     display: block;
+  }
+
+  .hamburger{
+    display: block;
+ }
+
+ .hamburger.active .bar:nth-child(2){
+    opacity: 0;
+ }
+
+ .hamburger.active .bar:nth-child(1){
+    transform: translateY(8px) rotate(45deg);
+ }
+
+ .hamburger.active .bar:nth-child(3){
+    transform: translateY(-8px) rotate(-45deg);
+ }
+
+  .menu{
+    position: fixed;
+    left: -100%;
+    top: 90px;
+    gap: 0;
+    flex-direction: column;
+    background-color: rgba(15, 13, 13, 0.7);
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+ }
+
+.nav-item{
+     margin: 16px 0;
+  }
+
+  .menu.active{
+     left: 0;
+  }
+  .search-input{
+    font-size: 8px;
+  }
+
+}
